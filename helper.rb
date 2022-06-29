@@ -6,7 +6,7 @@ class Helper
 
   def begin
     puts "New Game Started. Welcome #{@player_1.name} and #{@player_2.name}"
-    turn
+    round
   end 
 
   def winner()
@@ -23,13 +23,13 @@ class Helper
 
   end
 
-  def turn
+  def round
     @player_1.new_question
     winner
     @player_2.new_question
     winner
     puts "P1: #{@player_1.points}/3 vs P2: #{@player_2.points}/3"
-    puts '----NEW-TURN----'
-    turn
+    puts '----NEW-ROUND----'
+    round
   end
 end
